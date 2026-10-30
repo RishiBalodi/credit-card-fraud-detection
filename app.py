@@ -18,6 +18,9 @@ PYTHON_311 = r"C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe"
 if os.path.exists(PYTHON_311):
     os.environ["PYSPARK_PYTHON"] = PYTHON_311
     os.environ["PYSPARK_DRIVER_PYTHON"] = PYTHON_311
+else:
+    os.environ["PYSPARK_PYTHON"] = sys.executable
+    os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 if BASE_DIR not in sys.path:
